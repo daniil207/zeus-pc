@@ -183,8 +183,8 @@
       position: relative;
       min-height: calc(100vh - 74px);
       display: grid;
-      align-items: center;
-      padding: 92px 0 58px;
+      align-items: start;
+      padding: 84px 0 62px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       isolation: isolate;
     }
@@ -195,9 +195,9 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgba(11, 10, 16, 0.98) 0%, rgba(11, 10, 16, 0.86) 31%, rgba(11, 10, 16, 0.34) 68%, rgba(11, 10, 16, 0.14) 100%),
-        linear-gradient(180deg, rgba(11, 10, 16, 0.06) 0%, rgba(11, 10, 16, 0.22) 70%, var(--bg) 100%),
-        url("assets/zeus-hero-pc.png") right center / min(74vw, 1340px) auto no-repeat,
+        linear-gradient(90deg, rgba(11, 10, 16, 0.98) 0%, rgba(11, 10, 16, 0.90) 28%, rgba(11, 10, 16, 0.30) 55%, rgba(11, 10, 16, 0.02) 100%),
+        linear-gradient(180deg, rgba(11, 10, 16, 0.06) 0%, rgba(11, 10, 16, 0.18) 68%, var(--bg) 100%),
+        url("assets/zeus-hero-pc.png") right 48% bottom -16px / min(78vw, 1500px) auto no-repeat,
         var(--bg);
     }
 
@@ -214,7 +214,7 @@
     }
 
     .hero-content {
-      max-width: 760px;
+      max-width: 690px;
     }
 
     .hero-grid {
@@ -276,7 +276,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
-      max-width: 760px;
+      max-width: 860px;
     }
 
     .stat {
@@ -824,7 +824,7 @@
       .hero::before {
         background:
           linear-gradient(180deg, rgba(11, 10, 16, 0.08) 0%, rgba(11, 10, 16, 0.44) 36%, rgba(11, 10, 16, 0.97) 70%, var(--bg) 100%),
-          url("assets/zeus-hero-pc.png") center top / min(104vw, 760px) auto no-repeat,
+          url("assets/zeus-hero-pc.png") center top / min(112vw, 820px) auto no-repeat,
           var(--bg);
       }
 
