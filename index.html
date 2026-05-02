@@ -183,9 +183,9 @@
       position: relative;
       min-height: calc(100vh - 74px);
       display: grid;
-      align-items: start;
-      padding: 84px 0 62px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: center;
+      padding: 64px 0 72px;
+      border-bottom: 0;
       isolation: isolate;
     }
 
@@ -195,9 +195,9 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgba(11, 10, 16, 0.98) 0%, rgba(11, 10, 16, 0.90) 28%, rgba(11, 10, 16, 0.30) 55%, rgba(11, 10, 16, 0.02) 100%),
-        linear-gradient(180deg, rgba(11, 10, 16, 0.06) 0%, rgba(11, 10, 16, 0.18) 68%, var(--bg) 100%),
-        url("assets/zeus-hero-pc.png") right 48% bottom -16px / min(78vw, 1500px) auto no-repeat,
+        linear-gradient(90deg, rgba(11, 10, 16, 0.98) 0%, rgba(11, 10, 16, 0.92) 28%, rgba(11, 10, 16, 0.38) 52%, rgba(11, 10, 16, 0.03) 100%),
+        linear-gradient(180deg, rgba(11, 10, 16, 0.04) 0%, rgba(11, 10, 16, 0.12) 66%, var(--bg) 100%),
+        url("assets/zeus-hero-pc.png") right center / min(86vw, 1650px) auto no-repeat,
         var(--bg);
     }
 
@@ -276,7 +276,15 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
-      max-width: 860px;
+      max-width: 1180px;
+    }
+
+    .proof-band {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 58px;
+      border-top: 0;
+      margin-top: -38px;
     }
 
     .stat {
@@ -838,6 +846,11 @@
         grid-template-columns: 1fr;
       }
 
+      .proof-band {
+        margin-top: 0;
+        padding-bottom: 48px;
+      }
+
       .section-head {
         display: grid;
       }
@@ -966,20 +979,25 @@
                 </a>
                 <a class="btn secondary" href="https://t.me/maslov207" target="_blank" rel="noreferrer">Написать в Telegram</a>
               </div>
-              <div class="hero-stats" aria-label="Ключевые преимущества">
-                <div class="stat">
-                  <strong>5 вопросов</strong>
-                  <span>и честная рекомендация по уровню сборки</span>
-                </div>
-                <div class="stat">
-                  <strong>от 5 000 ₽</strong>
-                  <span>сборка, Windows и проверка работоспособности</span>
-                </div>
-                <div class="stat">
-                  <strong>без впаривания</strong>
-                  <span>не продаю железо, а помогаю выбрать нормально</span>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-band" aria-label="Ключевые преимущества">
+        <div class="wrap">
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>5 вопросов</strong>
+              <span>и честная рекомендация по уровню сборки</span>
+            </div>
+            <div class="stat">
+              <strong>от 5 000 ₽</strong>
+              <span>сборка, Windows и проверка работоспособности</span>
+            </div>
+            <div class="stat">
+              <strong>без впаривания</strong>
+              <span>не продаю железо, а помогаю выбрать нормально</span>
             </div>
           </div>
         </div>
