@@ -230,24 +230,23 @@
       border: 1px solid rgba(255, 20, 157, 0.16);
       border-radius: var(--radius);
       background:
-        linear-gradient(140deg, rgba(255, 20, 157, 0.11), transparent 42%),
-        linear-gradient(320deg, rgba(142, 44, 255, 0.16), transparent 44%),
-        rgba(255, 255, 255, 0.035);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.30), inset 0 0 70px rgba(255, 20, 157, 0.05);
+        radial-gradient(circle at 68% 36%, rgba(255, 20, 157, 0.22), transparent 13rem),
+        radial-gradient(circle at 38% 68%, rgba(142, 44, 255, 0.22), transparent 16rem),
+        linear-gradient(145deg, rgba(255, 20, 157, 0.08), rgba(118, 233, 255, 0.025) 46%, rgba(142, 44, 255, 0.09)),
+        rgba(255, 255, 255, 0.032);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.30), inset 0 0 90px rgba(255, 20, 157, 0.06);
     }
 
     .hero-art::before {
-      content: "ZEUS PC";
+      content: "";
       position: absolute;
-      left: 38px;
-      right: 38px;
+      left: 13%;
+      right: 8%;
       bottom: 42px;
-      color: rgba(255, 255, 255, 0.92);
-      font-size: clamp(38px, 5vw, 68px);
-      font-weight: 950;
-      line-height: 1;
-      letter-spacing: 0;
-      text-shadow: 0 0 18px rgba(255, 20, 157, 0.9), 0 0 34px rgba(142, 44, 255, 0.65);
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255, 20, 157, 0.36), rgba(142, 44, 255, 0.20) 48%, transparent 72%);
+      filter: blur(8px);
     }
 
     .hero-art::after {
@@ -262,122 +261,143 @@
       pointer-events: none;
     }
 
-    .neon-figure {
+    .pc-scene {
       position: absolute;
-      left: 54px;
-      top: 54px;
-      width: 260px;
-      height: 330px;
-      filter: drop-shadow(0 0 16px rgba(255, 20, 157, 0.56));
+      left: 50%;
+      top: 50%;
+      width: min(78%, 430px);
+      aspect-ratio: 0.72;
+      transform: translate(-50%, -48%) perspective(900px) rotateY(-13deg) rotateX(4deg);
+      transform-style: preserve-3d;
     }
 
-    .neon-head {
+    .pc-case {
       position: absolute;
-      right: 34px;
-      top: 0;
-      width: 120px;
-      height: 128px;
-      border: 5px solid var(--violet);
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      border-radius: 56% 44% 48% 52%;
-      transform: rotate(-12deg);
-    }
-
-    .neon-head::before {
-      content: "";
-      position: absolute;
-      left: -34px;
-      top: 36px;
-      width: 42px;
-      height: 42px;
-      border: 8px solid var(--pink);
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(255, 20, 157, 0.65);
-    }
-
-    .neon-beard {
-      position: absolute;
-      right: 28px;
-      top: 96px;
-      width: 126px;
-      height: 154px;
+      inset: 0;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
       background:
-        linear-gradient(135deg, transparent 0 18%, var(--violet) 19% 32%, transparent 33% 43%, var(--pink) 44% 58%, transparent 59%),
-        linear-gradient(45deg, transparent 0 28%, var(--purple) 29% 42%, transparent 43%);
-      clip-path: polygon(22% 0, 100% 8%, 80% 46%, 62% 100%, 38% 58%, 10% 86%, 24% 38%, 0 18%);
-      opacity: 0.9;
+        linear-gradient(90deg, rgba(255, 255, 255, 0.10), transparent 16%),
+        linear-gradient(145deg, rgba(34, 27, 47, 0.94), rgba(9, 8, 13, 0.98));
+      box-shadow:
+        0 32px 70px rgba(0, 0, 0, 0.48),
+        inset 0 0 0 9px rgba(255, 255, 255, 0.025),
+        inset 0 0 50px rgba(255, 20, 157, 0.08);
     }
 
-    .neon-body {
+    .pc-glass {
       position: absolute;
-      left: 56px;
-      right: 0;
-      bottom: 0;
-      height: 140px;
-      border: 5px solid rgba(194, 51, 255, 0.92);
-      border-top-color: var(--pink);
-      border-radius: 18px 70px 12px 12px;
-      transform: skewX(-9deg);
-      box-shadow: inset 0 0 24px rgba(255, 20, 157, 0.18);
-    }
-
-    .neon-bolt {
-      position: absolute;
-      left: 18px;
-      top: 54px;
-      width: 104px;
-      height: 310px;
-      background: linear-gradient(180deg, #fff, var(--pink) 42%, #fff 64%, var(--pink));
-      clip-path: polygon(42% 0, 96% 0, 62% 34%, 100% 34%, 28% 100%, 48% 55%, 7% 55%);
-      transform: rotate(-18deg);
-      box-shadow: 0 0 24px rgba(255, 20, 157, 0.85);
-    }
-
-    .gpu-card {
-      position: absolute;
-      right: 42px;
-      top: 168px;
-      width: 250px;
-      height: 132px;
-      border: 4px solid var(--pink);
+      inset: 28px 34px 34px 42px;
+      border: 1px solid rgba(255, 20, 157, 0.38);
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(255, 20, 157, 0.22), transparent 56%),
-        rgba(12, 10, 18, 0.82);
-      transform: rotate(5deg);
-      box-shadow: 0 0 28px rgba(255, 20, 157, 0.35);
+        linear-gradient(115deg, rgba(255, 255, 255, 0.13), transparent 22%),
+        linear-gradient(320deg, rgba(142, 44, 255, 0.20), transparent 48%),
+        rgba(11, 10, 16, 0.54);
+      box-shadow: inset 0 0 42px rgba(255, 20, 157, 0.10), 0 0 28px rgba(255, 20, 157, 0.12);
     }
 
-    .gpu-card::before,
-    .gpu-card::after {
+    .pc-glass::before {
       content: "";
       position: absolute;
-      top: 28px;
-      width: 68px;
-      height: 68px;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(116deg, transparent 0 52%, rgba(255, 255, 255, 0.11) 53% 55%, transparent 56%);
+      pointer-events: none;
+    }
+
+    .fan {
+      position: absolute;
+      width: 92px;
+      height: 92px;
       border: 8px solid var(--violet);
       border-radius: 50%;
-      box-shadow: inset 0 0 18px rgba(255, 20, 157, 0.35), 0 0 18px rgba(194, 51, 255, 0.45);
+      background:
+        conic-gradient(from 18deg, transparent 0 14%, rgba(255, 20, 157, 0.78) 15% 24%, transparent 25% 38%, rgba(118, 233, 255, 0.72) 39% 48%, transparent 49% 62%, rgba(194, 51, 255, 0.85) 63% 72%, transparent 73% 100%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.88) 0 10%, rgba(255, 20, 157, 0.28) 11% 22%, rgba(11, 10, 16, 0.8) 23%);
+      box-shadow: inset 0 0 22px rgba(255, 20, 157, 0.28), 0 0 24px rgba(194, 51, 255, 0.48);
     }
 
-    .gpu-card::before {
-      left: 34px;
+    .fan.one {
+      left: 62px;
+      top: 58px;
     }
 
-    .gpu-card::after {
-      right: 34px;
+    .fan.two {
+      left: 62px;
+      top: 174px;
     }
 
-    .gpu-lines {
+    .fan.three {
+      right: 54px;
+      top: 76px;
+      width: 82px;
+      height: 82px;
+      border-color: var(--pink);
+    }
+
+    .gpu {
       position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 16px;
+      left: 126px;
+      right: 44px;
+      bottom: 102px;
+      height: 72px;
+      border: 2px solid rgba(255, 20, 157, 0.78);
+      border-radius: 7px;
+      background:
+        linear-gradient(90deg, rgba(255, 20, 157, 0.18), transparent 36%),
+        rgba(19, 16, 28, 0.94);
+      box-shadow: 0 0 24px rgba(255, 20, 157, 0.28);
+    }
+
+    .gpu::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 13px;
       height: 8px;
       border-radius: 999px;
-      background: repeating-linear-gradient(90deg, var(--pink) 0 20px, transparent 20px 32px);
-      opacity: 0.8;
+      background: repeating-linear-gradient(90deg, var(--pink) 0 18px, transparent 18px 30px);
+    }
+
+    .power-bolt {
+      position: absolute;
+      left: 50%;
+      top: 80px;
+      width: 118px;
+      height: 280px;
+      transform: translateX(-50%) rotate(9deg);
+      background: linear-gradient(180deg, #fff, var(--pink) 46%, #fff 64%, var(--violet));
+      clip-path: polygon(42% 0, 100% 0, 62% 35%, 94% 35%, 28% 100%, 46% 57%, 5% 57%);
+      opacity: 0.92;
+      filter: drop-shadow(0 0 18px rgba(255, 20, 157, 0.85));
+      mix-blend-mode: screen;
+    }
+
+    .pc-badge {
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 24px;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(255, 20, 157, 0.72);
+    }
+
+    .pc-badge span:last-child {
+      width: 92px;
+      height: 5px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--pink), var(--violet), var(--cyan));
+      box-shadow: 0 0 18px rgba(255, 20, 157, 0.62);
     }
     }
 
@@ -1043,32 +1063,59 @@
         min-height: 330px;
       }
 
-      .neon-figure {
-        left: 22px;
-        top: 30px;
-        transform: scale(0.72);
-        transform-origin: top left;
+      .pc-scene {
+        width: min(86%, 300px);
       }
 
-      .gpu-card {
-        right: 18px;
-        top: 128px;
-        width: 190px;
-        height: 104px;
+      .pc-glass {
+        inset: 20px 22px 26px 28px;
       }
 
-      .gpu-card::before,
-      .gpu-card::after {
-        top: 23px;
-        width: 48px;
-        height: 48px;
-        border-width: 6px;
+      .fan {
+        width: 58px;
+        height: 58px;
+        border-width: 5px;
       }
 
-      .hero-art::before {
-        left: 22px;
-        right: 22px;
-        bottom: 28px;
+      .fan.one {
+        left: 40px;
+        top: 42px;
+      }
+
+      .fan.two {
+        left: 40px;
+        top: 116px;
+      }
+
+      .fan.three {
+        right: 34px;
+        top: 52px;
+        width: 54px;
+        height: 54px;
+      }
+
+      .gpu {
+        left: 78px;
+        right: 28px;
+        bottom: 74px;
+        height: 50px;
+      }
+
+      .power-bolt {
+        top: 54px;
+        width: 78px;
+        height: 190px;
+      }
+
+      .pc-badge {
+        left: 28px;
+        right: 28px;
+        bottom: 22px;
+        font-size: 18px;
+      }
+
+      .pc-badge span:last-child {
+        width: 62px;
       }
 
       section {
@@ -1168,14 +1215,18 @@
               </div>
             </div>
             <div class="hero-art" aria-hidden="true">
-              <div class="neon-figure">
-                <div class="neon-bolt"></div>
-                <div class="neon-head"></div>
-                <div class="neon-beard"></div>
-                <div class="neon-body"></div>
-              </div>
-              <div class="gpu-card">
-                <div class="gpu-lines"></div>
+              <div class="pc-scene">
+                <div class="pc-case"></div>
+                <div class="pc-glass"></div>
+                <div class="fan one"></div>
+                <div class="fan two"></div>
+                <div class="fan three"></div>
+                <div class="gpu"></div>
+                <div class="power-bolt"></div>
+                <div class="pc-badge">
+                  <span>ZEUS PC</span>
+                  <span></span>
+                </div>
               </div>
             </div>
           </div>
